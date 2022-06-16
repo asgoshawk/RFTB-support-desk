@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import NewTicket from './pages/NewTicket';
 import Tickets from './pages/Tickets';
+import Ticket from './pages/Ticket';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
                         </Route>
                         <Route path='/tickets' element={<PrivateRoute />} >
                             <Route path='/tickets' element={<Tickets />} />
+                        </Route>
+                        <Route path='/ticket/:ticketId' element={<PrivateRoute />} >
+                            <Route path='/ticket/:ticketId' element={<Ticket />} />
                         </Route>
                         <Route path='/*' element={<NotFound />} />
                     </Routes>
